@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5707CE3F20B627C200144DDF /* MeetupAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5707CE3E20B627C200144DDF /* MeetupAPI.m */; };
+		5707CE4220B70CF300144DDF /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5707CE4120B70CF300144DDF /* EventsViewController.m */; };
+		5707CE4620B714DB00144DDF /* EventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5707CE4520B714DB00144DDF /* EventCell.m */; };
+		5707CE4920B7260200144DDF /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5707CE4820B7260200144DDF /* ImageCache.m */; };
 		57B1055920B496D4004CDBA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B1055820B496D4004CDBA3 /* AppDelegate.m */; };
 		57B1055F20B496D4004CDBA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B1055D20B496D4004CDBA3 /* Main.storyboard */; };
 		57B1056120B496D6004CDBA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57B1056020B496D6004CDBA3 /* Assets.xcassets */; };
@@ -19,7 +22,6 @@
 		57B1058820B4BAC4004CDBA3 /* EventService.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B1058720B4BAC4004CDBA3 /* EventService.m */; };
 		57EEC95D20B5E97300216089 /* MeetupAPITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EEC95C20B5E97300216089 /* MeetupAPITests.m */; };
 		57EEC96020B5E9AE00216089 /* NetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EEC95F20B5E9AE00216089 /* NetworkHelper.m */; };
-		57EEC96920B613E100216089 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EEC96820B613E100216089 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,12 @@
 /* Begin PBXFileReference section */
 		5707CE3D20B627B300144DDF /* MeetupAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetupAPI.h; sourceTree = "<group>"; };
 		5707CE3E20B627C200144DDF /* MeetupAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetupAPI.m; sourceTree = "<group>"; };
+		5707CE4020B70CF300144DDF /* EventsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		5707CE4120B70CF300144DDF /* EventsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		5707CE4420B714DB00144DDF /* EventCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventCell.h; sourceTree = "<group>"; };
+		5707CE4520B714DB00144DDF /* EventCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventCell.m; sourceTree = "<group>"; };
+		5707CE4720B725F200144DDF /* ImageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
+		5707CE4820B7260200144DDF /* ImageCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCache.m; sourceTree = "<group>"; };
 		57B1055420B496D4004CDBA3 /* Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B1055720B496D4004CDBA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		57B1055820B496D4004CDBA3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -55,8 +63,6 @@
 		57EEC95C20B5E97300216089 /* MeetupAPITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetupAPITests.m; sourceTree = "<group>"; };
 		57EEC95E20B5E99D00216089 /* NetworkHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkHelper.h; sourceTree = "<group>"; };
 		57EEC95F20B5E9AE00216089 /* NetworkHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkHelper.m; sourceTree = "<group>"; };
-		57EEC96720B613E100216089 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		57EEC96820B613E100216089 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		57EEC96A20B6169C00216089 /* APIKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKeys.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5707CE4320B714C100144DDF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5707CE4420B714DB00144DDF /* EventCell.h */,
+				5707CE4520B714DB00144DDF /* EventCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		57B1054B20B496D4004CDBA3 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +118,7 @@
 				57F0ECA920B5BF0300407C1E /* Services */,
 				57F0ECAA20B5BF1300407C1E /* Utilities */,
 				57F0ECAB20B5BF2300407C1E /* Models */,
+				5707CE4320B714C100144DDF /* Views */,
 				57F0ECAD20B5BF3200407C1E /* Controllers */,
 				57B1056520B496D6004CDBA3 /* Info.plist */,
 			);
@@ -142,6 +158,8 @@
 				57EEC95F20B5E9AE00216089 /* NetworkHelper.m */,
 				5707CE3D20B627B300144DDF /* MeetupAPI.h */,
 				5707CE3E20B627C200144DDF /* MeetupAPI.m */,
+				5707CE4720B725F200144DDF /* ImageCache.h */,
+				5707CE4820B7260200144DDF /* ImageCache.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -167,8 +185,8 @@
 		57F0ECAD20B5BF3200407C1E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				57EEC96720B613E100216089 /* ViewController.h */,
-				57EEC96820B613E100216089 /* ViewController.m */,
+				5707CE4020B70CF300144DDF /* EventsViewController.h */,
+				5707CE4120B70CF300144DDF /* EventsViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -274,12 +292,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57EEC96920B613E100216089 /* ViewController.m in Sources */,
+				5707CE4620B714DB00144DDF /* EventCell.m in Sources */,
 				57B1058820B4BAC4004CDBA3 /* EventService.m in Sources */,
 				57B1057F20B49950004CDBA3 /* Event.m in Sources */,
 				57EEC96020B5E9AE00216089 /* NetworkHelper.m in Sources */,
+				5707CE4220B70CF300144DDF /* EventsViewController.m in Sources */,
 				57B1056720B496D6004CDBA3 /* main.m in Sources */,
 				57B1055920B496D4004CDBA3 /* AppDelegate.m in Sources */,
+				5707CE4920B7260200144DDF /* ImageCache.m in Sources */,
 				5707CE3F20B627C200144DDF /* MeetupAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,8 +6,11 @@
 //  Copyright © 2018 Alex Paul. All rights reserved.
 //
 
+#import "Event.h"
+
 @interface MeetupAPI: NSObject
 
-
+// [MeetupAPI searchEventWithKeyword:]
++ (void)searchEventWithKeyword:(NSString *)keyword completionHandler:(void(^)(NSError *error, NSArray <Event *> *events))completion;
 
 @end

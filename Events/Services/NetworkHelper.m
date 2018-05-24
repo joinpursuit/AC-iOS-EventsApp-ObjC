@@ -17,6 +17,7 @@
 
 @implementation NetworkHelper
 
+// [NetworkHelper sharedManager], [NSFileManager sharedManager]
 + (instancetype)sharedManager {
     static NetworkHelper *networkHelper;
     static dispatch_once_t once_token;
@@ -36,6 +37,7 @@
     return self;
 }
 
+// HTTP methods: GET, POST
 - (void)performRequestWithRequest:(NSURLRequest *)request completionHandler:(void (^)(NSError *, NSData *))completion {
     NSURLSessionDataTask *dataTask = [self.urlSession dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error) {
@@ -44,7 +46,8 @@
             completion(nil, data);
         }
     }];
-    [dataTask resume]; 
+    [dataTask resume]; // ALWAYS ADD resume() on the session task
+    // or state will be suspended and API call won't happen
 }
 
 @end
