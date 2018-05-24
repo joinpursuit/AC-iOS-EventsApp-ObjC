@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5707CE3F20B627C200144DDF /* MeetupAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5707CE3E20B627C200144DDF /* MeetupAPI.m */; };
 		57B1055920B496D4004CDBA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B1055820B496D4004CDBA3 /* AppDelegate.m */; };
 		57B1055F20B496D4004CDBA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B1055D20B496D4004CDBA3 /* Main.storyboard */; };
 		57B1056120B496D6004CDBA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57B1056020B496D6004CDBA3 /* Assets.xcassets */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5707CE3D20B627B300144DDF /* MeetupAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetupAPI.h; sourceTree = "<group>"; };
+		5707CE3E20B627C200144DDF /* MeetupAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetupAPI.m; sourceTree = "<group>"; };
 		57B1055420B496D4004CDBA3 /* Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B1055720B496D4004CDBA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		57B1055820B496D4004CDBA3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 				57B1058720B4BAC4004CDBA3 /* EventService.m */,
 				57EEC95E20B5E99D00216089 /* NetworkHelper.h */,
 				57EEC95F20B5E9AE00216089 /* NetworkHelper.m */,
+				5707CE3D20B627B300144DDF /* MeetupAPI.h */,
+				5707CE3E20B627C200144DDF /* MeetupAPI.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 				57EEC96020B5E9AE00216089 /* NetworkHelper.m in Sources */,
 				57B1056720B496D6004CDBA3 /* main.m in Sources */,
 				57B1055920B496D4004CDBA3 /* AppDelegate.m in Sources */,
+				5707CE3F20B627C200144DDF /* MeetupAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
