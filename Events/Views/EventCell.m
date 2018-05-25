@@ -110,7 +110,19 @@
         // use a cocoapod e.g SDWebImage...
         // or native
         UIImage *image = [[ImageCache sharedManager] getImageForKey:event.highResLink];
-        self.eventImage.image = image;
+        if (image)
+            self.eventImage.image = image;
+        else {
+            [[ImageCache sharedManager] downloadImageWithURLString:event.highResLink completionHandler:^(NSError * error, UIImage *image) {
+                if (error)
+                    NSLog(@"download image error: %@", error.localizedDescription);
+                else {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        self.eventImage.image = image;
+                    });
+                }
+            }];
+        }
     }
 }
 

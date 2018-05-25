@@ -12,5 +12,6 @@
 
 + (id)sharedManager; // singleton
 - (UIImage *)getImageForKey:(NSString *)key;
+- (void)downloadImageWithURLString:(NSString *)urlString completionHandler:(void (^)(NSError *, UIImage *))completion;
 
 @end

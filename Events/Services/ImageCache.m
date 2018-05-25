@@ -11,7 +11,8 @@
 #import "NetworkHelper.h"
 
 @interface ImageCache ()
-// NSCache is does with images stores images with key
+// NSCache stores images using key/value pairs in the caches directory to prevent image flickering
+// and better scrolling performance in our table view
 @property (nonatomic) NSCache *sharedCache;
 @property (nonatomic) NSMutableURLRequest *urlRequest;
 @end
@@ -41,20 +42,7 @@
 }
 
 - (UIImage *)getImageForKey:(NSString *)key {
-    if (![self.sharedCache objectForKey:key]) {
-        [self downloadImageForKeyAndAddToCache:key];
-    }
     return [self.sharedCache objectForKey:key];
-}
-
-- (void)downloadImageForKeyAndAddToCache:(NSString *)key {
-    [self downloadImageWithURLString:key completionHandler:^(NSError * error, UIImage * image) {
-        if (error) {
-            NSLog(@"download image error: %@", error.localizedDescription);
-        } else {
-            [self cacheImage:image forKey:key];
-        }
-    }];
 }
 
 - (void)downloadImageWithURLString:(NSString *)urlString completionHandler:(void (^)(NSError *, UIImage *))completion {
@@ -66,6 +54,7 @@
             completion(error, nil);
         } else {
             UIImage *image = [[UIImage alloc] initWithData:data];
+            [self cacheImage:image forKey:urlString];
             completion(nil, image);
         }
     }];
