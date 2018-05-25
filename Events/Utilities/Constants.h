@@ -6,8 +6,6 @@
 //  Copyright © 2018 Alex Paul. All rights reserved.
 //
 
-
-
 #define CREATED @"created"
 #define ID @"id"
 #define NAME @"name"

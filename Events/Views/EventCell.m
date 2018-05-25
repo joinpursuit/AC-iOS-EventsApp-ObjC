@@ -84,16 +84,17 @@
           [self.eventName.topAnchor constraintEqualToAnchor:self.eventDate.bottomAnchor constant: PADDING],
           [self.eventName.leadingAnchor constraintEqualToAnchor:self.eventImage.trailingAnchor constant: PADDING],
           [self.eventName.trailingAnchor constraintEqualToAnchor:self.trailingAnchor constant: -PADDING]
-                                              ]];
+    ]];
 }
 
 - (void)setupGroupName {
-    // TODO
+    // TODO: setup group name
 }
 
 - (void) prepareForReuse {
     [super prepareForReuse];
     self.eventImage.image = [UIImage imageNamed:@"placeholder-image"];
+    self.urlString = @"";
 }
 
 - (void)configureViewWithEvent:(Event *)event {
@@ -110,18 +111,18 @@
     else
         self.eventName.text = event.eventName;
     
-    // configure group name
+    // TODO: configure group name
     
-    // configure image
+    // configure image using ImageCache
+    // this solution can be achieved through the use a cocoapod e.g SDWebImage...
     if (event.highResLink) {
-        // use a cocoapod e.g SDWebImage...
-        // or native
+        self.urlString = event.highResLink;
         UIImage *image = [[ImageCache sharedManager] getImageForKey:event.highResLink];
         if (image) {
-            self.eventImage.image = image;
+            if([self.urlString isEqualToString:event.highResLink])
+                self.eventImage.image = image;
         }
         else {
-            self.urlString = event.highResLink;
             [[ImageCache sharedManager] downloadImageWithURLString:event.highResLink completionHandler:^(NSError * error, UIImage *image) {
                 if (error)
                     NSLog(@"download image error: %@", error.localizedDescription);

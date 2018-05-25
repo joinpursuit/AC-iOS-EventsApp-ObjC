@@ -13,7 +13,6 @@
 
 @implementation MeetupAPI
 
-// TODO: write a Unit Test for this method
 + (void)searchEventWithKeyword:(NSString *)keyword completionHandler:(void (^)(NSError *, NSArray<Event *> *))completion {
     
     NSString *encodedString = [keyword stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];

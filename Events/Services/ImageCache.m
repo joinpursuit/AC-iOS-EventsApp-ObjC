@@ -11,14 +11,13 @@
 #import "NetworkHelper.h"
 
 @interface ImageCache ()
-// NSCache stores images using key/value pairs in the caches directory to prevent image flickering
-// and better scrolling performance in our table view
+// NSCache stores objects to the caches directory. This prevents the redownloading of existing assets.
 @property (nonatomic) NSCache *sharedCache;
 @property (nonatomic) NSMutableURLRequest *urlRequest;
 @end
 
 @implementation ImageCache
-// implementing a Singleton pattern in Objective-C
+// Singleton pattern in Objective-C
 + (instancetype)sharedManager {
     static ImageCache *sharedMyManager = nil;
     static dispatch_once_t onceToken;

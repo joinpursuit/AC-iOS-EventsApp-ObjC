@@ -10,5 +10,7 @@
 #import "Event.h"
 
 @interface EventCell : UITableViewCell
+
 - (void)configureViewWithEvent:(Event *)event;
+
 @end

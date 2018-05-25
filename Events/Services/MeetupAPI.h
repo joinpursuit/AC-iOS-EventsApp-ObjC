@@ -10,7 +10,7 @@
 
 @interface MeetupAPI: NSObject
 
-// [MeetupAPI searchEventWithKeyword:]
+// Making this a class method helps us call the method directly e.g [MeetupAPI searchEventWithKeyword:]
 + (void)searchEventWithKeyword:(NSString *)keyword completionHandler:(void(^)(NSError *error, NSArray <Event *> *events))completion;
 
 @end

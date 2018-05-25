@@ -37,7 +37,7 @@
     return self;
 }
 
-// HTTP methods: GET, POST
+// Some examples of HTTP methods we normally use: GET, POST
 - (void)performRequestWithRequest:(NSURLRequest *)request completionHandler:(void (^)(NSError *, NSData *))completion {
     NSURLSessionDataTask *dataTask = [self.urlSession dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error) {
@@ -47,7 +47,7 @@
         }
     }];
     [dataTask resume]; // ALWAYS ADD resume() on the session task
-    // or state will be suspended and API call won't happen
+    // or state will be suspended and API calls won't happen as expected
 }
 
 @end
