@@ -7,3 +7,4 @@ The Events app is written in Objective-c and makes requests to the Meetup API to
 **Unit Tests**  
 * EventsTests.m
 * MeetupAPITests.m
+* PersistenceDataTests.m
