@@ -17,6 +17,7 @@
 @property (nonatomic) UILabel *eventDate;
 @property (nonatomic) UILabel *eventName;
 @property (nonatomic) UILabel *groupName;
+@property (nonatomic, copy) NSString *urlString;
 @end
 
 @implementation EventCell
@@ -26,6 +27,7 @@
     if (self) {
         // setup views
         [self setupViews];
+        _urlString = [[NSString alloc] init];
     }
     return self; 
 }
@@ -89,6 +91,11 @@
     // TODO
 }
 
+- (void) prepareForReuse {
+    [super prepareForReuse];
+    self.eventImage.image = [UIImage imageNamed:@"placeholder-image"];
+}
+
 - (void)configureViewWithEvent:(Event *)event {
     self.eventImage.image = [UIImage imageNamed:@"placeholder-image"];
     // configure date
@@ -110,15 +117,18 @@
         // use a cocoapod e.g SDWebImage...
         // or native
         UIImage *image = [[ImageCache sharedManager] getImageForKey:event.highResLink];
-        if (image)
+        if (image) {
             self.eventImage.image = image;
+        }
         else {
+            self.urlString = event.highResLink;
             [[ImageCache sharedManager] downloadImageWithURLString:event.highResLink completionHandler:^(NSError * error, UIImage *image) {
                 if (error)
                     NSLog(@"download image error: %@", error.localizedDescription);
                 else {
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        self.eventImage.image = image;
+                        if([self.urlString isEqualToString:event.highResLink])
+                            self.eventImage.image = image;
                     });
                 }
             }];
