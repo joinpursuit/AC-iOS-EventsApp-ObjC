@@ -9,7 +9,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <UIKit/UIKit.h>
 
-@interface Event: NSObject
+@interface Event: NSObject <NSCoding>
 
 // root
 @property (nonatomic) NSNumber *eventCreated;

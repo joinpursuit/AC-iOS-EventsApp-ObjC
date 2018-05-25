@@ -11,6 +11,7 @@
 		5707CE4220B70CF300144DDF /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5707CE4120B70CF300144DDF /* EventsViewController.m */; };
 		5707CE4620B714DB00144DDF /* EventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5707CE4520B714DB00144DDF /* EventCell.m */; };
 		5707CE4920B7260200144DDF /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5707CE4820B7260200144DDF /* ImageCache.m */; };
+		5707CE4B20B796D400144DDF /* PersistenceDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5707CE4A20B796D400144DDF /* PersistenceDataTests.m */; };
 		57B1055920B496D4004CDBA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B1055820B496D4004CDBA3 /* AppDelegate.m */; };
 		57B1055F20B496D4004CDBA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B1055D20B496D4004CDBA3 /* Main.storyboard */; };
 		57B1056120B496D6004CDBA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57B1056020B496D6004CDBA3 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		5707CE4520B714DB00144DDF /* EventCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventCell.m; sourceTree = "<group>"; };
 		5707CE4720B725F200144DDF /* ImageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
 		5707CE4820B7260200144DDF /* ImageCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCache.m; sourceTree = "<group>"; };
+		5707CE4A20B796D400144DDF /* PersistenceDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersistenceDataTests.m; sourceTree = "<group>"; };
 		57B1055420B496D4004CDBA3 /* Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B1055720B496D4004CDBA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		57B1055820B496D4004CDBA3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			children = (
 				57B1057020B496D6004CDBA3 /* EventsTests.m */,
 				57EEC95C20B5E97300216089 /* MeetupAPITests.m */,
+				5707CE4A20B796D400144DDF /* PersistenceDataTests.m */,
 				57B1057220B496D6004CDBA3 /* Info.plist */,
 			);
 			path = EventsTests;
@@ -308,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5707CE4B20B796D400144DDF /* PersistenceDataTests.m in Sources */,
 				57EEC95D20B5E97300216089 /* MeetupAPITests.m in Sources */,
 				57B1057120B496D6004CDBA3 /* EventsTests.m in Sources */,
 			);

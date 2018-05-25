@@ -9,8 +9,6 @@
 #import <XCTest/XCTest.h>
 #import "Event.h"
 
-#define APIKEY @"641e35a1d59e162a65215b7a5639e"
-
 @interface EventsTests : XCTestCase
 
 @end
@@ -55,5 +53,7 @@
         XCTFail(@"Path NOT FOUND");
     }
 }
+
+
 
 @end

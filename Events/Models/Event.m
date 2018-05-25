@@ -27,8 +27,8 @@
             _eventId = dict[ID];
         if (dict[NAME])
             _eventName = dict[NAME];
-        if (dict[NAME])
-            _rsvpCount = [dict[NAME] integerValue];
+        if (dict[RSVP_COUNT])
+            _rsvpCount = [dict[RSVP_COUNT] integerValue];
         if (dict[LOCAL_DATE])
             _localDate = dict[LOCAL_DATE];
         
@@ -67,6 +67,25 @@
                     _highResLink = self.photoDict[HIGHEST_LINK];
             }
         }
+    }
+    return self;
+}
+
+#pragma mark NSCoding Protocol Methods
+- (void)encodeWithCoder:(nonnull NSCoder *)aCoder {
+    [aCoder encodeObject:_eventCreated forKey:CREATED];
+    [aCoder encodeObject:_eventId forKey:ID];
+    [aCoder encodeObject:_eventName forKey:NAME];
+    [aCoder encodeInteger:_rsvpCount forKey:RSVP_COUNT];
+}
+
+- (instancetype)initWithCoder:(nonnull NSCoder *)aDecoder {
+    self = [super init];
+    if (self) {
+        _eventCreated = [aDecoder decodeObjectForKey:CREATED];
+        _eventId = [aDecoder decodeObjectForKey:ID];
+        _eventName = [aDecoder decodeObjectForKey:NAME];
+        _rsvpCount = [aDecoder decodeIntegerForKey:RSVP_COUNT];
     }
     return self;
 }
